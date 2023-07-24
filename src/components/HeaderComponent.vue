@@ -96,13 +96,15 @@
                             
                     </div>
     
-                    <div class="col-4">
+                    <div class="col-6">
                         
-                    
-                        <img src="../assets/img/h-2-slider-img-15.png" alt="">
-                    
-                    
-                        <img src="../assets/img/h-2-slider-img-16.png" alt="">
+                        <div class="img-slider">
+                            
+                            <img src="../assets/img/h-2-slider-img-15.png" alt="">
+                        
+                        
+                            <img src="../assets/img/h-2-slider-img-16.png" alt="">
+                        </div>
                     
                     
                     </div>
@@ -122,15 +124,22 @@
     ul {
         vertical-align: middle;
         display: inline;
+        li {
+            list-style:none;
+            padding-left: 10px;
+            display: inline-block;
+            
+            > a {
+                text-decoration: none;
+                color: black;
+            }
+        }
     }
-    li {
-        list-style:none;
-        padding-left: 10px;
-        display: inline-block;
+    .img-slider {
         
-        > a {
-            text-decoration: none;
-            color: black;
+        > img {
+            width: 200px;
+            display: inline-block;
         }
     }
 </style>

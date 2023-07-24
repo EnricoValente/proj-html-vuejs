@@ -1,6 +1,4 @@
 <script>
-    import HeaderComponent from "./components"
-
     export default {
     data() {
         return {
@@ -15,6 +13,6 @@
   
 </template>
 
-<style >
+<style scoped>
 
 </style>

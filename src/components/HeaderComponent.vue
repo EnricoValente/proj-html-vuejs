@@ -74,43 +74,80 @@
         </section>
 
         <section>
-            <div class="container">
-                <!-- <div>
-                    <i class="fa-solid fa-chevron-left"></i>
-                </div>
+            <div class="container mt-5">
+                <div class="slider-box">
+                    <div class="prev">
+                       <i class="fa-solid fa-chevron-left"></i>
+                   </div>
+                    <div class="next">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-5">
+                            <div class="slide-description">
+                                <h1>
+                                    Devotion that never <em><strong>ends</strong></em>
+                                </h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis tempore at architecto est impedit nostrum vitae quasi voluptates similique consequatur.
+                                </p>
+                                <button>
+                                    read more
+                                </button>
+                            </div>
 
-                <div>
-                    <i class="fa-solid fa-chevron-right"></i>
-                </div> -->
-                <div class="row justify-content-center">
-                    <div class="col-4">
-                        <h1>
-                            Devotion that never <em><strong>ends</strong></em>
-                        </h1>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis tempore at architecto est impedit nostrum vitae quasi voluptates similique consequatur.
-                        </p>
-                        <button>
-                            read more
-                        </button>
-                            
-                    </div>
-    
-                    <div class="col-6">
-                        
-                        <div class="img-slider">
-                            
-                            <img src="../assets/img/h-2-slider-img-15.png" alt="">
-                        
-                        
-                            <img src="../assets/img/h-2-slider-img-16.png" alt="">
+                                
                         </div>
-                    
-                    
+        
+                        <div class="col-6">
+                            
+                            <div class="img-slider d-flex justify-content-center">
+                                <div class="img-box">
+
+                                    <img src="../assets/img/h-2-slider-img-15.png" alt="">
+                                    
+                                    <div class="secondary-img first">
+                                        <img src="../assets/img/h-2-slider-img-12.png" alt="">
+                                    </div>
+    
+                                    <div class="secondary-img second">
+                                        <img src="../assets/img/h-2-slider-img-13.png" alt="">
+                                    </div>
+    
+                                    <div class="secondary-img third">
+                                        <img src="../assets/img/short-slider-rev-1-img-2.png" alt="">
+                                    </div>
+                                </div>
+                                    
+
+                                <div class="img-box">
+
+                                    <img src="../assets/img/h-2-slider-img-16.png" alt="">
+
+                                    <div class="secondary-img fourth">
+                                        <img src="../assets/img/h-2-slider-img-14.png" alt="">
+                                    </div>
+    
+                                    <div class="secondary-img fifth">
+                                        <img src="../assets/img/short-slider-rev-1-img-6.png" alt="">
+                                    </div>
+    
+                                    <div class="secondary-img sixth">
+                                        <img src="../assets/img/h-2-slider-img-17.png" alt="">
+                                    </div>
+                                </div>
+
+                            </div>
+                                    
+                            
+                        
+                        
+                        </div>
                     </div>
                 </div>
-                            
             </div>
+                    
+                            
         </section>
     </Header>
 </template>
@@ -135,11 +172,91 @@
             }
         }
     }
-    .img-slider {
+
+    .img-slider{
         
-        > img {
+        .img-box {
             width: 200px;
             display: inline-block;
+            position: relative;
+            
+          
+        }
+        .secondary-img {
+           
+          width: 30px;
+          position: absolute;
+       }
+    
+       .first {
+           bottom: 50%;
+           right: 100%;
+        }
+           
+       .second {
+           bottom: 10%;
+           left:0;
+       }
+
+       .third {
+           bottom: 100%;
+           left: 10%;
+        }
+        
+        .fourth {
+            bottom: 100%;
+            right: 10%;
+        }
+        .fifth {
+            bottom: 50%;
+            left: 100%;
+        }
+
+        .sixth {
+            bottom: 10%;
+            right: 0;
+        }
+
+    }
+
+    .slider-box {
+        position: relative;
+        > .prev {
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background-color: #F5D8CA;
+
+            > i {
+                
+                color: white;
+            }
+            
+        }
+
+        > .next {
+            position: absolute;
+            left: 100%;
+            top: 50%;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            background-color: #F5D8CA;
+
+            > i {
+                
+                color: white;
+            }
+            
         }
     }
+
+
 </style>

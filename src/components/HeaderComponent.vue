@@ -1,22 +1,54 @@
 <script>
+    import {store} from '../store.js'
     export default {
-    data() {
-        return {
-            images: [
-                {
-                    leftImage: '../assets/img/h-2-slider-img-15.png',
-                    rightImage:'../assets/img/h-2-slider-img-16.png',
-                    secondaryImageOne:'../assets/img/h-2-slider-img-12.png',
-                    secondaryImageOne:'../assets/img/h-2-slider-img-13.png',
-                    secondaryImageThree:'../assets/img/short-slider-rev-1-img-2.png',
-                    secondaryImageFour:'../assets/img/h-2-slider-img-14.png',
-                    
-                }
+        data() {
+            return {
+                store,
+
+                images: [
+                    {
+                        leftImage: 'h-2-slider-img-15.png',
+                        rightImage:'h-2-slider-img-16.png',
+                        secondaryImageOne:'h-2-slider-img-12.png',
+                        secondaryImageTwo:'h-2-slider-img-13.png',
+                        secondaryImageThree:'short-slider-rev-1-img-2.png',
+                        secondaryImageFour:'h-2-slider-img-14.png',
+                        secondaryImageFive:'short-slider-rev-1-img-6.png',
+                        secondaryImageSix:'h-2-slider-img-17.png',
+                        title:'Devotion that never ends',
+                        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis tempore at architecto est impedit nostrum vitae quasi voluptates similique consequatur.',
+                        slideButton:'read more'
+                    },
+                    {
+                        leftImage: 'short-slider-rev-1-img-3.png',
+                        rightImage:'h-2-slider-img-11.png',
+                        secondaryImageOne:'short-slider-rev-1-img-1.png',
+                        secondaryImageTwo:'h-2-slider-img-13.png',
+                        secondaryImageThree:'short-slider-rev-1-img-4.png',
+                        secondaryImageFour:'short-slider-rev-1-img-5.png',
+                        secondaryImageFive:'short-slider-rev-1-img-10.png',
+                        secondaryImageSix:'short-slider-rev-1-img-9.png',
+                        title:'Devotion that never ends',
+                        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis tempore at architecto est impedit nostrum vitae quasi voluptates similique consequatur.',
+                        slideButton:'read more'
+                    }
+                ],
+                slideIndex: 0,
 
 
-            ]
+            }
+        },
+        methods: {
+            getImage: function(img) {
+                return new URL(`../assets/img/${img}` , import.meta.url).href;
+            },
+            nextSlide(){
+                this.slideIndex++;
+            },
+            prevSlide(){
+                this.slideIndex--;
+            }
         }
-    }
     }
 </script>
 
@@ -88,24 +120,25 @@
         <section>
             <div class="container mt-5">
                 <div class="slider-box">
-                    <div class="prev">
+                    <div class="prev" @click="prevSlide()">
                        <i class="fa-solid fa-chevron-left"></i>
                    </div>
-                    <div class="next">
+                    <div class="next" @click="nextSlide()">
                         <i class="fa-solid fa-chevron-right"></i>
                     </div>
-                    <div class="row justify-content-center align-items-center">
+                    <div class="row justify-content-center align-items-center" v-for="(image, index) in images" :key="index" :class="index == slideIndex ? '' : 'none'" >
                         <div class="col-5">
                             <div class="slide-description">
                                 <h1>
-                                    Devotion that never <em><strong>ends</strong></em>
+                                   {{ images[slideIndex].title }} 
                                 </h1>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis tempore at architecto est impedit nostrum vitae quasi voluptates similique consequatur.
+                                    {{ images[slideIndex].description }}
                                 </p>
                                 <button>
-                                    read more
+                                    {{ images[slideIndex].slideButton }}
                                 </button>
+                                
                             </div>
 
                                 
@@ -114,38 +147,38 @@
                         <div class="col-6">
                             
                             <div class="img-slider d-flex justify-content-center" >
-                                <div class="img-box" v-for="(image, index) in images">
+                                <div class="img-box">
 
-                                    <img :src="image.leftImage" alt="">
+                                    <img :src="getImage(images[slideIndex].leftImage)" alt="">
                                     
                                     <div class="secondary-img first">
-                                        <img src="../assets/img/h-2-slider-img-12.png" alt="">
+                                        <img :src="getImage(images[slideIndex].secondaryImageOne)" alt="">
                                     </div>
     
                                     <div class="secondary-img second">
-                                        <img src="../assets/img/h-2-slider-img-13.png" alt="">
+                                        <img :src="getImage(images[slideIndex].secondaryImageTwo)" alt="">
                                     </div>
     
                                     <div class="secondary-img third">
-                                        <img src="../assets/img/short-slider-rev-1-img-2.png" alt="">
+                                        <img :src="getImage(images[slideIndex].secondaryImageThree)" alt="">
                                     </div>
                                 </div>
                                     
 
                                 <div class="img-box">
 
-                                    <img src="../assets/img/h-2-slider-img-16.png" alt="">
+                                    <img :src="getImage(images[slideIndex].rightImage)" alt="">
 
                                     <div class="secondary-img fourth">
-                                        <img src="../assets/img/h-2-slider-img-14.png" alt="">
+                                        <img :src="getImage(images[slideIndex].secondaryImageFour)" alt="">
                                     </div>
     
                                     <div class="secondary-img fifth">
-                                        <img src="../assets/img/short-slider-rev-1-img-6.png" alt="">
+                                        <img :src="getImage(images[slideIndex].secondaryImageFive)" alt="">
                                     </div>
-    
+
                                     <div class="secondary-img sixth">
-                                        <img src="../assets/img/h-2-slider-img-17.png" alt="">
+                                        <img :src="getImage(images[slideIndex].secondaryImageSix)" alt="">
                                     </div>
                                 </div>
 
@@ -184,7 +217,10 @@
             }
         }
     }
-
+    .none {
+        display: none;
+    }
+    
     .img-slider{
         
         .img-box {

@@ -2,7 +2,19 @@
     export default {
     data() {
         return {
-        
+            images: [
+                {
+                    leftImage: '../assets/img/h-2-slider-img-15.png',
+                    rightImage:'../assets/img/h-2-slider-img-16.png',
+                    secondaryImageOne:'../assets/img/h-2-slider-img-12.png',
+                    secondaryImageOne:'../assets/img/h-2-slider-img-13.png',
+                    secondaryImageThree:'../assets/img/short-slider-rev-1-img-2.png',
+                    secondaryImageFour:'../assets/img/h-2-slider-img-14.png',
+                    
+                }
+
+
+            ]
         }
     }
     }
@@ -101,10 +113,10 @@
         
                         <div class="col-6">
                             
-                            <div class="img-slider d-flex justify-content-center">
-                                <div class="img-box">
+                            <div class="img-slider d-flex justify-content-center" >
+                                <div class="img-box" v-for="(image, index) in images">
 
-                                    <img src="../assets/img/h-2-slider-img-15.png" alt="">
+                                    <img :src="image.leftImage" alt="">
                                     
                                     <div class="secondary-img first">
                                         <img src="../assets/img/h-2-slider-img-12.png" alt="">
@@ -146,9 +158,9 @@
                     </div>
                 </div>
             </div>
+        </section>
                     
                             
-        </section>
     </Header>
 </template>
 

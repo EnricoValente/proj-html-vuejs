@@ -32,17 +32,17 @@
                 },
                 {
                     class:'fa-regular fa-comment',
-                    title:'First theres an idea',
+                    title:'Than we talk about',
                     description:' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur sequi laborum dolor perferendis vitae ad.'
                 },
                 {
                     class:'fa-solid fa-cloud',
-                    title:'First theres an idea',
+                    title:'And we think about',
                     description:' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur sequi laborum dolor perferendis vitae ad.'
                 },
                 {
                     class:'fa-solid fa-compass-drafting',
-                    title:'First theres an idea',
+                    title:'So we draw along',
                     description:' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur sequi laborum dolor perferendis vitae ad.'
                 },
             ]
@@ -59,7 +59,7 @@
 
 
 <template>
-    <main>
+    <main class="mt-4">
         <section>
             <div class="row">
               <div class="col-4 g-0" v-for="(singleCard, i) in portCards" :key="i">
@@ -68,32 +68,42 @@
             </div>
         </section>
         
-        <section>
+        <section class="bg-white">
             
             <div class="container">
                 <h2 class="text-center pt-5">
                     Working process
                 </h2>
-                <div class="row justify-content-between aling-items-center content-box pt-4">
-                    <div class="process-box col-2" v-for="(icon, index) in icons" :key="index">
-                        
-                           
-                        <div class="icons text-center">
-                            <i :class="icon.class"></i>
+
+                
+                <div class="content-box">
+                    <div class="row justify-content-between">
+                        <div class="process-box col-3 " v-for="(icon, index) in icons" :key="index">
+                            
+                                
+                            <div class="icons text-center mx-auto">
+                                <i :class="icon.class"></i>
+                            </div>
+    
+                            <div class="text-center">
+                                <h6>
+                                    {{ icon.title }}
+                                </h6>
+                                <p>
+                                    {{ icon.description }}
+                                </p> 
+    
+                            </div>
+                            
+    
                         </div>
-
-                        
-                        <!-- <h6 class="text-center">
-                            First theres an idea
-                        </h6>
-                        <p class="text-center">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur sequi laborum dolor perferendis vitae ad.
-                        </p> -->
-                        
-
+    
                     </div>
 
-                </div>
+                </div>   
+
+                    
+                
                     
                 
             
@@ -125,39 +135,47 @@
         background-repeat: no-repeat;
         background-position: center;
         
-    
     }
         
+        
+    
+        
 
-        .icons {
-           width: 100px;
-           height: 100px;
-           line-height: 110px; 
-           background-color:#FAF7F1;
-           border-radius: 50%;
-           
+    .icons {
+        width: 80px;
+        height: 80px;
+        line-height: 90px; 
+        background-color:#FAF7F1;
+        border-radius: 50%;
+        
 
-           > i {
-            font-size: 30px;
-           
-           }
-           
-          
-           
+        > i {
+        font-size: 20px;
+        
         }
-        .icons-text {
-            width: 200px;
-        }
+        
+        
+        
+    }
+    .process-box {
             
-        h6 {
-            white-space: nowrap;
-        }
+            
+            
+        
+    }
+        
+    h6 {
+        white-space: nowrap;
+        font-size: 10px;
+        
+    }
 
-        p {
-            font-size: 10px;
-            color: #A6A6A6;
-            white-space: wrap;
-        }
+    p {
+        font-size: 10px;
+        color: #A6A6A6;
+        white-space: wrap;
+        
+    }
              
             
         

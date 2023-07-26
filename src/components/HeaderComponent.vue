@@ -221,6 +221,10 @@
         display: none;
     }
     
+    
+   
+    
+    
     .img-slider{
         
         .img-box {

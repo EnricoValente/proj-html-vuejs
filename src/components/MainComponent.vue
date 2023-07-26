@@ -119,19 +119,38 @@
                     
                 
 
-        <section class="work-section">
+        <section class="work-section pt-5">
             <div class="container">
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-6">
-                        <h2 class="text-center">
-                            Working progress
-                        </h2>
-                        
-                    </div>
+                
+                <div class="text-center col pt-5">
+                    <h2>
+                        Want to work with us? Send a message!
+                    </h2>
+
                 </div>
+                <div class="text-center  pt-5">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod amet quia rem corporis, perferendis labore nisi tenetur repellendus itaque saepe a ut iusto est error perspiciatis laborum sunt quaerat incidunt!
+                    </p>
+                </div>
+
+                <div class="text-center pt-5 link-container">
+                    <a href="#" class="contact-link">CONTACT</a>
+                </div>
+
+               
+                
+                    
+                    
+                    
+
+                
             </div>
 
         </section>
+
+                        
+
                     
     </main>
 </template>
@@ -168,23 +187,48 @@
     }
     .process-box {
             
+        h6 {
+            white-space: nowrap;
+            font-size: 10px;
             
+        }
+    
+        p {
+            font-size: 10px;
+            color: #A6A6A6;
+            white-space: wrap;
             
-        
+        }
+            
     }
-        
-    h6 {
-        white-space: nowrap;
-        font-size: 10px;
-        
-    }
+    .work-section {
+        background-image:url('../assets/img/h-2-background-1.jpg') ;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
 
-    p {
-        font-size: 10px;
-        color: #A6A6A6;
-        white-space: wrap;
+        .link-container {
+            
+            
+           
+            .contact-link {
+                width: 70px;
+                height: 30px;
+                background-color: #D8F0E3;
+                font-size: 10px;
+                text-decoration: none;
+                color: black;
+                padding: 10px;
+                display: inline-block;
+                
+               
+            }
+
+        }
         
-    }
+    }        
+        
+        
              
             
         

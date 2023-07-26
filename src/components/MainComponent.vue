@@ -76,7 +76,7 @@
                 </h2>
 
                 
-                <div class="content-box">
+                <div class="content-box py-3 mx-auto">
                     <div class="row justify-content-between">
                         <div class="process-box col-3 " v-for="(icon, index) in icons" :key="index">
                             
@@ -101,7 +101,9 @@
                     </div>
 
                 </div>   
-
+            </div>
+                
+        </section>
                     
                 
                     
@@ -110,19 +112,25 @@
                     
                         
                 
-            </div>
                     
                     
-        </section>
                     
                     
                     
                 
 
-        <section>
-            <h2>
-                Working progress
-            </h2>
+        <section class="work-section">
+            <div class="container">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-6">
+                        <h2 class="text-center">
+                            Working progress
+                        </h2>
+                        
+                    </div>
+                </div>
+            </div>
+
         </section>
                     
     </main>
@@ -131,11 +139,12 @@
 <style scoped lang="scss">
     .content-box {
         background-image: url('../assets/svg/svg-3.svg');
-        background-size: cover;
+        background-size: contain;
         background-repeat: no-repeat;
-        background-position: center;
+        max-width: 800px;
         
     }
+        
         
         
     

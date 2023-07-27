@@ -45,6 +45,24 @@
                     title:'So we draw along',
                     description:' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur sequi laborum dolor perferendis vitae ad.'
                 },
+            ],
+
+            blogCards: [
+                {
+                    blogImage: 'h-2-blog-img-1.jpg',
+                    text:'This way, loves: a detailed guide through new design',
+                    caption:'By Emily Fields'
+                },
+                {
+                    blogImage: 'h-2-blog-img-2.jpg',
+                    text:'I try to give people a different way of looking arts',
+                    caption:'By Emily Fields'
+                },
+                {
+                    blogImage: 'h-2-blog-img-3.jpg',
+                    text:'Introduce Richard Laperrière of those amazing features',
+                    caption:'By Emily Fields'
+                },
             ]
         }
     },
@@ -60,7 +78,7 @@
 
 <template>
     <main class="mt-4">
-        <section>
+        <section class="pt-4">
             <div class="row">
               <div class="col-4 g-0" v-for="(singleCard, i) in portCards" :key="i">
                 <img :src="getImagePath(singleCard.src)" alt="">
@@ -68,7 +86,7 @@
             </div>
         </section>
         
-        <section class="bg-white">
+        <section class="bg-light">
             
             <div class="container">
                 <h2 class="text-center pt-5">
@@ -128,7 +146,7 @@
                     </h2>
 
                 </div>
-                <div class="text-center  pt-5">
+                <div class="text-center  pt-3">
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod amet quia rem corporis, perferendis labore nisi tenetur repellendus itaque saepe a ut iusto est error perspiciatis laborum sunt quaerat incidunt!
                     </p>
@@ -136,10 +154,38 @@
 
                 <div class="text-center pt-3 pb-5 link-container">
                     <button class="contact-link">
-                        <a href="#" class="">CONTACT</a>
+                        <a href="" class="link">CONTACT</a>
+                        
                     </button>
 
                 </div>
+
+            </div>
+        </section>
+
+        <section class="bg-light pt-5">
+            <div class="blog-box pt-5">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-3" v-for="(blog, blogIndex) in blogCards" :key="blogIndex">
+                        <img :src="getImagePath(blog.blogImage)" alt="">
+
+                        <div class="pt-2">
+                           <strong>
+                                This way, loves: a detailed guide through new design
+                           </strong> 
+                        </div>
+
+                        
+                        <h6 class="caption">
+                            <em>{{ blog.caption }}</em>
+
+                        </h6>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+                
 
                
                 
@@ -148,9 +194,7 @@
                     
 
                 
-            </div>
 
-        </section>
 
                         
 
@@ -210,30 +254,49 @@
         background-position: center;
         background-repeat: no-repeat;
 
-        .link-container {
+        p {
+            color: #A6A6A6;
+            font-size: 12px;
+        }
             
             
            
-            .contact-link {
-                width: 110px;
-                height: 40px;
-                background-color: #D8F0E3;
+        .contact-link {
+            width: 110px;
+            height: 40px;
+            background-color: #D8F0E3;
+            text-decoration: none;
+            border: 1px solid #D8F0E3;
+            
+            .link {
+                font-size: 10px;
                 text-decoration: none;
-                border: 1px solid #D8F0E3;
+                color: black;
                 
-                > a {
-                    font-size: 10px;
-                    text-decoration: none;
-                    color: black;
-                    
-                    
-                }
-               
+                
             }
+            
+        }
 
+        .link-container :hover {
+            
+            background-color: #F3D0C7;
+            border: 1px solid #F3D0C7;
+
+            > .link :hover {
+                color: white;
+            }
         }
         
-    }        
+        .blog-box {
+            max-width: 800px;
+            margin: auto;
+
+
+        }
+    }
+        
+            
         
         
              

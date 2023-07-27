@@ -164,14 +164,14 @@
         </section>
 
         <section class="bg-light pt-5">
-            <div class="blog-box pt-5">
+            <div class="container pt-5 pb-5">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-3" v-for="(blog, blogIndex) in blogCards" :key="blogIndex">
                         <img :src="getImagePath(blog.blogImage)" alt="">
 
                         <div class="pt-2">
                            <strong>
-                                This way, loves: a detailed guide through new design
+                                {{ blog.text }}
                            </strong> 
                         </div>
 
@@ -288,12 +288,12 @@
             }
         }
         
-        .blog-box {
-            max-width: 800px;
-            margin: auto;
+        // .blog-box {
+        //     max-width: 800px;
+        //     margin: auto;
 
 
-        }
+        // }
     }
         
             

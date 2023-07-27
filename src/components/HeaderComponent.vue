@@ -210,6 +210,7 @@
             list-style:none;
             padding-left: 10px;
             display: inline-block;
+            font-size: 12px;
             
             > a {
                 text-decoration: none;

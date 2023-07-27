@@ -134,8 +134,11 @@
                     </p>
                 </div>
 
-                <div class="text-center pt-5 link-container">
-                    <a href="#" class="contact-link">CONTACT</a>
+                <div class="text-center pt-3 pb-5 link-container">
+                    <button class="contact-link">
+                        <a href="#" class="">CONTACT</a>
+                    </button>
+
                 </div>
 
                
@@ -212,15 +215,19 @@
             
            
             .contact-link {
-                width: 70px;
-                height: 30px;
+                width: 110px;
+                height: 40px;
                 background-color: #D8F0E3;
-                font-size: 10px;
                 text-decoration: none;
-                color: black;
-                padding: 10px;
-                display: inline-block;
+                border: 1px solid #D8F0E3;
                 
+                > a {
+                    font-size: 10px;
+                    text-decoration: none;
+                    color: black;
+                    
+                    
+                }
                
             }
 

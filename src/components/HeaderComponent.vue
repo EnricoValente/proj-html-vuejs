@@ -17,7 +17,7 @@
                         secondaryImageSix:'h-2-slider-img-17.png',
                         title:'Devotion that never ends',
                         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis tempore at architecto est impedit nostrum vitae quasi voluptates similique consequatur.',
-                        slideButton:'read more'
+                        slideButton:'READ MORE'
                     },
                     {
                         leftImage: 'short-slider-rev-1-img-3.png',
@@ -30,7 +30,7 @@
                         secondaryImageSix:'short-slider-rev-1-img-9.png',
                         title:'Devotion that never ends',
                         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis tempore at architecto est impedit nostrum vitae quasi voluptates similique consequatur.',
-                        slideButton:'read more'
+                        slideButton:'READ MORE'
                     }
                 ],
                 slideIndex: 0,
@@ -218,11 +218,25 @@
             }
         }
     }
+
+    .slide-description {
+        > p {
+            font-size: 12px;
+            color: #A6A6A6;
+        }
+    }
     .none {
         display: none;
     }
     
-    
+    button {
+        width: 110px;
+        height: 40px;
+        background-color: white;
+        text-decoration: none;
+        border: 1px solid #F5D8CA;
+        font-size: 10px;
+    }
    
     
     
@@ -279,9 +293,9 @@
             top: 50%;
             right: 100%;
             border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            line-height: 30px;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
             text-align: center;
             background-color: #F5D8CA;
 
@@ -296,9 +310,9 @@
             position: absolute;
             left: 100%;
             top: 50%;
-            width: 30px;
-            height: 30px;
-            line-height: 30px;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
             border-radius: 50%;
             text-align: center;
             background-color: #F5D8CA;
